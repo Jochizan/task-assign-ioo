@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asignación de tareas</title>
+    <script src="http://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-green-300 flex flex-col min-h-screen">
+<div class="bg-green-800 px-3 py-3">
+    <h2 class="text-3xl font-semibold text-white m-0">Aplicación de Asignación de Tareas</h2>
+</div>
+
+<main class="flex grow p-4 justify-center">
+
+    <div class="container bg-green-400 border-green-800 px-4 flex justify-center items-center flex-col rounded-lg">
+        <section>
+            <h2 class="text-xl font-normal text-white">Escribe la dimensión principal de su matriz cuadrada:</h2>
+            <div class="flex justify-around items-center mt-4">
+
+                <input
+                        type="number"
+                        id="valueChange"
+                        class="appearance-none w-24 bg-gray-200 text-gray-700 border border-blue-500 rounded py-2 px-2 leading-tight focus:outline-none focus:bg-white"
+                />
+                <input type="button"
+                       id="buttonChangeArray"
+                       class="bg-blue-500 hover:bg-blue-700 text-white font-bold px-2 py-2 border border-blue-700 rounded"
+                       value="Generar Matriz"/>
+            </div>
+        </section>
+        <section class="insert-html w-96">
+            <div class="py-4 flex justify-around">
+                <input class="is bg-gray-200 appearance-none border-2 border-gray-200 rounded w-12 h-12 py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-400"
+                       value="0" type="number" id="0+0">
+                <input class="is bg-gray-200 appearance-none border-2 border-gray-200 rounded w-12 h-12 py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-400"
+                       value="0" type="number" id="0+1">
+                <input class="is bg-gray-200 appearance-none border-2 border-gray-200 rounded w-12 h-12 py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-400"
+                       value="0" type="number" id="0+2">
+            </div>
+            <div class="py-4 flex justify-around">
+                <input class="is bg-gray-200 appearance-none border-2 border-gray-200 rounded w-12 h-12 py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-400"
+                       value="0" type="number" id="1+0">
+                <input class="is bg-gray-200 appearance-none border-2 border-gray-200 rounded w-12 h-12 py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-400"
+                       value="0" type="number" id="1+1">
+                <input class="is bg-gray-200 appearance-none border-2 border-gray-200 rounded w-12 h-12 py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-400"
+                       value="0" type="number" id="1+2">
+            </div>
+            <div class="py-4 flex justify-around">
+                <input class="is bg-gray-200 appearance-none border-2 border-gray-200 rounded w-12 h-12 py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-400"
+                       value="0" type="number" id="2+0">
+                <input class="is bg-gray-200 appearance-none border-2 border-gray-200 rounded w-12 h-12 py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-400"
+                       value="0" type="number" id="2+1">
+                <input class="is bg-gray-200 appearance-none border-2 border-gray-200 rounded w-12 h-12 py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-400"
+                       value="0" type="number" id="2+2">
+            </div>
+        </section>
+
+        <div class="flex justify-center">
+            <button
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
+                    id="buttonSendArray">Resolver
+            </button>
+        </div>
+        <div class="flex justify-center my-4">
+        <p id="answer" class="text-lg text-white font-semibold"></p>
+        </div>
+    </div>
+
+</main>
+<script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script>
+</body>
+
+</html>
